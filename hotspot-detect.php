@@ -11,12 +11,22 @@ include dirname(__FILE__) . '/useragent.class.php';
 $useragent = UserAgentFactory::analyze($_SERVER['HTTP_USER_AGENT']);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<title>UserAgent</title>
+	<title>Success</title>
+	<style type="text/css">
+		.content {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
+Success
+	<div class="content">
+		<img src="xx.gif">
+		<h1>✨网络可以用！✨</h1>
+	</div>
 	<h1>Test UserAgent</h1>
 	<p>UserAgent: <?php echo $useragent->useragent; ?></p>
 	<p>Platform Type: <?php echo $useragent->platform['type'] ?>
